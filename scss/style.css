@@ -1,0 +1,328 @@
+@use 'vars';
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+/***** GENERAL *****/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #4d4d44;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  background-color: #000;
+}
+
+header .upper-header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  padding: 1rem;
+  background-color: #000;
+}
+
+header .upper-header .social-media-up {
+  display: none;
+}
+
+header #down-header {
+  display: none;
+  position: fixed;
+  top: 7%;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  height: 200vw;
+  background-color: #000;
+}
+
+header #down-header .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5rem 0.5rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .container-lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .container-lang p {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+header .container-lang .lang-selector {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  height: 13px;
+  width: 40px;
+  margin: 3px 8px;
+  background-color: #4d4d44;
+  border: 2px solid #ff1aff;
+  border-radius: 45px;
+}
+
+header .container-lang .lang-selector:checked {
+  background-color: #4a77ff;
+}
+
+header .container-lang .lang-selector:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 11px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 45px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+header .container-lang .lang-selector:checked::before {
+  left: 67%;
+}
+
+.tittle {
+  margin: 5rem auto 1rem auto;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+}
+
+/***** INTRO *****/
+.intro-body {
+  position: fixed;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.intro-body .intro-header {
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+  background: none;
+}
+
+.intro-body .fix-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.intro-body .fix-main .intro-container {
+  margin: 4rem 0 0;
+}
+
+.intro-body .fix-main .intro-container .big-tittle {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1900ms;
+          animation-duration: 1900ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-animation-delay: 60ms;
+          animation-delay: 60ms;
+}
+
+.intro-body .fix-main .intro-container .subtittle {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.intro-body .fix-main .intro-container .container-enter-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 3rem auto 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+}
+
+.intro-body .fix-main .intro-container .container-enter-btn .enter-btn {
+  margin: 2rem 0 0 0;
+  padding: 0.5rem 1rem;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 45px;
+  background-color: #000;
+}
+
+.intro-body #bg-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 576px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2500ms;
+          animation-duration: 2500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+/***** CONTACT *****/
+.contact-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+fieldset {
+  margin: 1rem auto 0.5rem auto;
+  padding: 2rem;
+  width: 80%;
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.submit-btn {
+  display: block;
+  margin: 1rem auto 0.5rem auto;
+  padding: 0.5rem 1rem;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 5px;
+  border: 2px solid #fff;
+  border-radius: 45px;
+  background: none;
+}
+
+/***** ANIMATION *****/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
