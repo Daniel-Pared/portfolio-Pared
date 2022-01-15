@@ -1,0 +1,124 @@
+@import 'vars';
+
+
+
+@media(min-width: $md) {
+
+    header {
+        .upper-header {
+            display: flex;
+            justify-content: space-between;
+    
+            .social-media-up {
+                display: flex;
+                margin-right: 2em;
+                width: 90px;
+                justify-content: space-between;
+            }
+        }
+
+        #down-header {
+            height: 165px;
+    
+            .social-media {
+                display: none;
+            }
+        }
+
+        .container-lang {
+            margin: 2rem 0 $S1 0;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                margin: 0;
+            }
+        }  
+    }
+    
+    /*INTRO*/
+
+    .fix-main {
+
+        .intro-container {
+
+            .big-tittle {
+                font-size: 3.5em;
+                letter-spacing: 0.5rem;
+            }
+        }
+
+        .subtittle {
+            font-size: 2rem;
+            letter-spacing: 0.5rem;
+        }
+    }
+
+
+    /*General*/
+    .tittle {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+    }
+
+    .contact-footer {
+        position: relative;
+    }
+}
+
+@media(min-width: $lg) {
+
+    .fix-main {
+
+        .big-tittle {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
+    }
+
+    .contact-main {
+        height: auto;
+
+        .form-group {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .container-input {
+                width: 46%;
+            }
+        }
+    }
+
+    .tittle {
+        margin-top: 15rem;
+        font-size: 4.5rem;
+        letter-spacing: 1rem;
+    }
+}
+
+@media(min-width: $xl) {
+
+    .fix-main {
+
+        .intro-container {
+         
+            .big-tittle {
+                font-size: 6.5rem;
+                letter-spacing: 1rem;
+            }
+        }
+
+    }
+}

@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../scss/style.css">
 </head>
-<body class="bg-body">
+<body>
     <header>
         <div class="upper-header">
             <img src="../icons/menu.svg" alt="menu_icon" id="menu-icon">
@@ -39,14 +39,20 @@
             </div>
         </div>
     </header>
-        <main class="contact-main">
+    <main class="contact-main">
         <h1 class="tittle">CONTACT ME</h1>
         <fieldset>
             <form action="#" method="POST">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <label for="mail">Email</label>
-                <input type="email" name="mail" id="mail" required>
+                <div class="form-group">
+                    <div class="container-input">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="input-row">
+                    </div>
+                    <div class="container-input">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" id="mail" class="input-row" required>
+                    </div>
+                </div>
                 <label for="subject">Subject</label>
                 <input type="text" name="subject" id="subject">
                 <label for="message">Message</label>
