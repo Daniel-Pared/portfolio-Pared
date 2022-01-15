@@ -24,50 +24,6 @@ function newURL() {
     }
 };
 
-//Change background video [---- IN CONSTRUCTION -----].
-
-let screenWidth = window.screen.width;
-console.log(screenWidth);
-
-window.addEventListener("resize", getScreenReSize);
-
-function getScreenReSize () {
-    let x = window.screen.width;
-    console.log(x);
-};
-
-//let video = document.getElementById("bg-video");
-//var videoSource = video.getElementsByTagName("source");
-//var video1 = videoSource[1];
-//console.log(video1);
-
-//if (screenW >= 576) {
-//    video1.onplay();
- //   console.log(videoSource);
-//}
-
-
-
-
-
-
-//Use of Enter key to go to home page.
-
-window.addEventListener("keydown", (event) => {
-    asingValues();
-    if (event.key === 'Enter' && page.localeCompare(index) === 0) {
-        let indexEs = file.localeCompare(fileEs);
-
-        if (indexEs === 0) {
-            window.location.href = `${route}/home.html`;
-        }
-        else {
-            window.location.href = `${route}/${filePage}/home.html`;
-        };
-    };
-    
-});
-
 
 //Change the language website.
 
@@ -77,15 +33,12 @@ function changeLang() {
     asingValues();
     newURL();
 
-    if  (langSelect.checked === false && page.localeCompare(index) === 0) {
-        window.location.href = `${route}/${page}`;
+    if  (langSelect.checked === true) {
+        window.location.href = `${route}/${fileEs}/${page}`;
     }
-    else if (langSelect.checked == false && page.localeCompare(index) !== 0) {
+    else if (langSelect.checked == false) {
         window.location.href = `${route}/${filePage}/${page}`;
     }
-    else {
-        window.location.href = `${route}/${fileEs}/${page}`;
-    };
 };
 
 
