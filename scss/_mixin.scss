@@ -5,11 +5,10 @@
     border-radius: $radius;
 }
 
-@mixin font ($sz) {
+@mixin font {
     font-family: $font-primary;
     text-decoration: none;
     color: $w;
-    font-size: $sz;
 }
 
 @mixin anim ($time) {

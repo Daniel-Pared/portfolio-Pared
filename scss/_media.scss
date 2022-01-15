@@ -45,17 +45,25 @@
     }
     
     /*INTRO*/
-    .big-tittle {
-        font-size: 4rem;
-        letter-spacing: 0.5rem;
+
+    .fix-main {
+
+        .intro-container {
+
+            .big-tittle {
+                font-size: 3.5em;
+                letter-spacing: 0.5rem;
+            }
+        }
+
+        .subtittle {
+            font-size: 2rem;
+            letter-spacing: 0.5rem;
+        }
     }
 
-    .subtittle {
-        font-size: 2rem;
-        letter-spacing: 0.5rem;
-    }
 
-    /*CONTACT*/
+    /*General*/
     .tittle {
         font-size: 3rem;
         letter-spacing: 0.5rem;
@@ -63,27 +71,31 @@
         margin-bottom: 3rem;
     }
 
-    textarea {
-        width: 400px;
+    .contact-footer {
+        position: relative;
     }
 }
 
 @media(min-width: $lg) {
-    .big-tittle {
-        font-size: 5rem;
-        letter-spacing: 1rem;
+
+    .fix-main {
+
+        .big-tittle {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
     }
 
     .contact-main {
         height: auto;
 
-        .container-inputs {
+        .form-group {
             display: flex;
             width: 100%;
             flex-direction: row;
             justify-content: space-between;
 
-            .div-input {
+            .container-input {
                 width: 46%;
             }
         }
@@ -94,15 +106,19 @@
         font-size: 4.5rem;
         letter-spacing: 1rem;
     }
-
-    .contact-footer {
-        position: relative;
-    }
 }
 
 @media(min-width: $xl) {
-    .big-tittle {
-        font-size: 6.5rem;
-        letter-spacing: 1rem;
+
+    .fix-main {
+
+        .intro-container {
+         
+            .big-tittle {
+                font-size: 6.5rem;
+                letter-spacing: 1rem;
+            }
+        }
+
     }
 }

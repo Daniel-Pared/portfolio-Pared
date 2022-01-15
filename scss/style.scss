@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'mixin';
+@import 'media';
 
 
 
@@ -69,7 +70,8 @@ header {
         justify-content: center;
 
         p {
-            @include font (1em);
+            @include font;
+            font-size: 1em;
         }
 
         .lang-selector {
@@ -123,12 +125,14 @@ header {
 
 .tittle {
     margin: 5rem auto $S1 auto;
-    @include font(2em);
+    @include font;
+    font-size: 2em;
     text-align: center;
 }
 
 a {
-    @include font(1em);
+    @include font;
+    font-size: 1em;
 }
 
 
@@ -158,14 +162,16 @@ a {
             margin: 4rem 0 0;
     
             .big-tittle {
-                @include font(2em);
+                @include font;
+                font-size: 2em;
                 text-align: center;
                 @include anim (1900ms);
                 animation-delay: 60ms;
             }
     
             .subtittle {
-                @include font (1em);
+                @include font;
+                font-size: 1em;
                 text-align: center;
                 @include anim (1000ms);
                 animation-delay: 700ms;
@@ -186,7 +192,7 @@ a {
                     font-size: 1.2rem;
                     letter-spacing: 5px;
                     text-align: center;
-                    @include brd($radius: 45px);
+                    @include brd($radius: 15px);
                     background-color: $b;
                 }
             }
@@ -226,7 +232,8 @@ a {
         label {
             display: block;
             margin: $half 0;
-            @include font(1em);
+            @include font;
+            font-size: 1em;
         }
 
         input {
@@ -249,10 +256,11 @@ a {
         .submit-btn {
             display: block;
             margin: $S1 auto $half auto;
-            @include font(1em);
+            @include font;
+            font-size:  1em;
             padding: $half $S1;
             letter-spacing: 5px;
-            @include brd(45px);
+            @include brd(15px);
             background: none;
         }
     }
@@ -266,7 +274,8 @@ a {
     background: none;
 
     p {
-        @include font(1em);
+        @include font;
+        font-size: 1em;
         text-align: center;
     }
 }
@@ -283,5 +292,3 @@ a {
         opacity: 1;
     }
 }
-
-@import 'media';
