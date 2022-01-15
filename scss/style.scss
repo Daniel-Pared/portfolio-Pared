@@ -1,13 +1,19 @@
 @import 'vars';
 @import 'mixin';
 
+
+
+/***** GENERAL *****/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
 
-/***** GENERAL *****/
+html {
+    height: 100vh;
+}
 
 body {
     display: flex;
@@ -20,6 +26,7 @@ body {
 header {
     position: absolute;
     width: 100%;
+    height: 50px;
     z-index: 999;
     background-color: $b;
 
@@ -28,7 +35,7 @@ header {
         z-index: 999;
         width: 100%;
         top: 0;
-        padding: $S1;
+        padding: $half $S1;
         background-color: $b;
 
         .social-media-up {
@@ -39,7 +46,7 @@ header {
     #down-header {
         display: none;
         position: fixed;
-        top: 7%;
+        top: 5%;
         width: 100%;
         padding: 2rem 0 0 0;
         height: 200vw;
@@ -52,6 +59,8 @@ header {
         }
 
     }
+
+    /*language selector*/
 
     .container-lang {
         display: flex;
@@ -93,6 +102,23 @@ header {
             }
         }
     }
+
+    /*menu*/
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    #menu-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    nav ul li {
+        margin: 2rem 0;
+        text-align: center;
+}
 }
 
 .tittle {
@@ -101,6 +127,9 @@ header {
     text-align: center;
 }
 
+a {
+    @include font(1em);
+}
 
 
 /***** INTRO *****/
@@ -154,11 +183,11 @@ header {
                 .enter-btn {
                     margin: 2rem 0 0 0;
                     padding: $half $S1;
-                    @include font(1.2rem);
+                    font-size: 1.2rem;
                     letter-spacing: 5px;
                     text-align: center;
                     @include brd($radius: 45px);
-                background-color: $b;
+                    background-color: $b;
                 }
             }
         }
@@ -176,6 +205,8 @@ header {
     }
 }
 
+
+
 /***** CONTACT *****/
 
 .contact-main {
@@ -185,29 +216,59 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+    fieldset {
+        margin: $S1 auto $half auto;
+        padding: 2rem;
+        width: 80%;
+        @include brd(25px);
+
+        label {
+            display: block;
+            margin: $half 0;
+            @include font(1em);
+        }
+
+        input {
+            height: 30px;
+        }
+
+        .input-row {
+            width: 100%;
+        }
+
+        #subject {
+            width: 100%;
+        }
+
+        textarea {
+            width:100%;
+            height: 100px;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: $S1 auto $half auto;
+            @include font(1em);
+            padding: $half $S1;
+            letter-spacing: 5px;
+            @include brd(45px);
+            background: none;
+        }
+    }
 }
 
-fieldset {
-    margin: $S1 auto $half auto;
-    padding: 2rem;
-    width: 80%;
-    @include brd(25px);
-}
-
-label {
-    display: block;
-    margin: $half 0;
-    @include font(1em);
-}
-
-.submit-btn {
-    display: block;
-    margin: $S1 auto $half auto;
-    padding: $half $S1;
-    @include font(1em);
-    letter-spacing: 5px;
-    @include brd(45px);
+.contact-footer {
+    position: absolute;
+    bottom: 2%;
+    margin: $S1 0;
+    width: 100%;
     background: none;
+
+    p {
+        @include font(1em);
+        text-align: center;
+    }
 }
 
 
@@ -222,3 +283,5 @@ label {
         opacity: 1;
     }
 }
+
+@import 'media';
