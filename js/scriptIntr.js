@@ -6,19 +6,26 @@ let page;
 let file;
 let varLength;
 
+function newURL() {
+    route = window.document.URL;
+    page = route.split("/").pop();
+    varLength = page.length + 1;
+    file = route.substring(0, route.length - varLength).split("/").pop();
+    route = route.substring(0, route.length - varLength);
+}
+
 
 //Use of Enter key to go to home page.
 
 window.addEventListener("keydown", (event) => {
-    asingValues();
-    if (event.key === 'Enter' && page.localeCompare(index) === 0) {
-        let indexEs = file.localeCompare(fileEs);
+    if (event.key === 'Enter') {
+        newURL();
 
-        if (indexEs === 0) {
-            window.location.href = `${route}/home.html`;
+        if (file.localeCompare(fileEs) !== 0) {
+            window.location.href = `${route}/pages/home.html`;
         }
         else {
-            window.location.href = `${route}/${filePage}/home.html`;
+            window.location.href = `${route}/home.html`;
         };
     };
     
@@ -28,14 +35,6 @@ window.addEventListener("keydown", (event) => {
 //Change the language website.
 
 langSelect.addEventListener('click', changeLang);
-
-function newURL() {
-    route = window.document.URL;
-    page = route.split("/").pop();
-    varLength = page.length + 1;
-    file = route.substring(0, route.length - varLength).split("/").pop();
-    route = route.substring(0, route.length - varLength);
-}
 
 function changeLang() {
     newURL();
