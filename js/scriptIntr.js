@@ -27,13 +27,13 @@ window.addEventListener("keydown", (event) => {
 
 //Change the language website.
 
-langSelect.addEventListener('click', changeLang);
+//langSelect.addEventListener('click', changeLang);
 
 
 langSelect.addEventListener('click', changeLanguage);
 
 function changeLanguage () {
-    elementNodeReference.lang = "es";
+    element.lang = "es";
 }
 
 function newURL() {
@@ -44,37 +44,37 @@ function newURL() {
     route = route.substring(0, route.length - varLength);
 }
 
-function changeLang() {
-    newURL();
+//function changeLang() {
+//    newURL();
+//
+//    if (file.localeCompare(fileEs) !== 0) {
+//        window.location.href = `${route}/${fileEs}/${page}`;
+//    }
+//    else {
+//        varLength = file.length + 1;
+//        route = route.substring(0, route.length - varLength);
+//        window.location.href = `${route}/${page}`;
+//    }
+//}
 
-    if (file.localeCompare(fileEs) !== 0) {
-        window.location.href = `${route}/${fileEs}/${page}`;
+//Change background video.
+
+window.addEventListener("resize", videoSource)
+
+
+function videoSource () {
+    let size = window.screen.width;
+    let vid = document.getElementById("bg-video");
+
+    if(size >= 500)  {
+        if (size >= 1024){
+            vid.setAttribute("src", "./media/video/bg_video_lg.mp4");
+        }
+        else {
+            vid.setAttribute("src", "./media/video/bg_video_md.mp4");
+        }    
     }
     else {
-        varLength = file.length + 1;
-        route = route.substring(0, route.length - varLength);
-        window.location.href = `${route}/${page}`;
+        vid.setAttribute("src", "./media/video/bg_video_xs.mp4")
     }
 }
-
-//Change background video [---- IN CONSTRUCTION -----].
-
-let screenWidth = window.screen.width;
-console.log(screenWidth);
-
-window.addEventListener("resize", getScreenReSize);
-
-function getScreenReSize () {
-    let x = window.screen.width;
-    console.log(x);
-};
-
-//let video = document.getElementById("bg-video");
-//var videoSource = video.getElementsByTagName("source");
-//var video1 = videoSource[1];
-//console.log(video1);
-
-//if (screenW >= 576) {
-//    video1.onplay();
- //   console.log(videoSource);
-//}
