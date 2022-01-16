@@ -13,7 +13,7 @@
 }
 
 html {
-    height: 100vh;
+    height: auto;
 }
 
 body {
@@ -291,4 +291,18 @@ a {
     100% {
         opacity: 1;
     }
+}
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (min-width: $md){
+    @include tablet;
+}
+
+@media screen and (min-width: $lg){
+    @include desktop;
+}
+
+@media screen and (min-width: $xl){
+    @include fullscreen;
 }
