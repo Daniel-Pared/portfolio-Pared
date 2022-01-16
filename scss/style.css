@@ -1,19 +1,4 @@
 @use 'vars';
-@use 'vars';
-/*@media screen and (min-width: $xl) {
-
-    .fix-main {
-
-        .intro-container {
-         
-            .big-tittle {
-                font-size: 6.5rem;
-                letter-spacing: 1rem;
-            }
-        }
-
-    }
-} */
 /***** GENERAL *****/
 * {
   margin: 0;
@@ -23,7 +8,7 @@
 }
 
 html {
-  height: 100vh;
+  height: auto;
 }
 
 body {
@@ -449,8 +434,8 @@ a {
     font-size: 3.5em;
     letter-spacing: 0.5rem;
   }
-  .intro-body .fix-main .subtittle {
-    font-size: 2rem;
+  .intro-body .fix-main .intro-container .subtittle {
+    font-size: 1.6rem;
     letter-spacing: 0.5rem;
   }
   /*General*/
@@ -460,9 +445,11 @@ a {
     margin-top: 10rem;
     margin-bottom: 3rem;
   }
-  .contact-footer {
-    position: relative;
-  }
+  /*.contact-footer {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: $half;
+    }*/
 }
 
 @media screen and (min-width: 1024px) {
@@ -470,6 +457,10 @@ a {
     font-size: 4.3rem;
     letter-spacing: 1rem;
   }
+  .intro-body .fix-main .intro-container .subtittle {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
   .contact-main {
     height: auto;
   }
@@ -493,36 +484,17 @@ a {
     margin-top: 15rem;
     font-size: 4.5rem;
     letter-spacing: 1rem;
+  }
+  .contact-footer {
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .intro-body .fix-main .intro-container .big-tittle {
-    font-size: 4.3rem;
-    letter-spacing: 1rem;
-  }
-  .contact-main {
-    height: auto;
-  }
-  .contact-main .form-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .contact-main .form-group .container-input {
-    width: 46%;
-  }
-  .tittle {
-    margin-top: 15rem;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     letter-spacing: 1rem;
   }
 }
