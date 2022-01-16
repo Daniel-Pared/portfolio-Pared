@@ -1,14 +1,13 @@
-@import 'vars';
+@use 'vars';
 
 
-
-@media(min-width: $md) {
+@mixin tablet {
 
     header {
         .upper-header {
             display: flex;
             justify-content: space-between;
-    
+        
             .social-media-up {
                 display: flex;
                 margin-right: 2em;
@@ -16,53 +15,55 @@
                 justify-content: space-between;
             }
         }
-
+    
         #down-header {
             height: 165px;
-    
+        
             .social-media {
                 display: none;
             }
         }
-
+    
         .container-lang {
             margin: 2rem 0 $S1 0;
         }
-
+    
         .icon {
             height: 40px;
             width: 40px;
         }
-
+    
         nav ul{
             display: flex;
             justify-content: space-evenly;
-
+    
             li {
                 margin: 0;
             }
         }  
     }
-    
+        
     /*INTRO*/
-
-    .fix-main {
-
-        .intro-container {
-
-            .big-tittle {
-                font-size: 3.5em;
+    
+    .intro-body {
+    
+        .fix-main {
+    
+            .intro-container {
+    
+                .big-tittle {
+                    font-size: 3.5em;
+                    letter-spacing: 0.5rem;
+                }
+            }
+    
+            .subtittle {
+                font-size: 2rem;
                 letter-spacing: 0.5rem;
             }
         }
-
-        .subtittle {
-            font-size: 2rem;
-            letter-spacing: 0.5rem;
-        }
     }
-
-
+    
     /*General*/
     .tittle {
         font-size: 3rem;
@@ -70,19 +71,25 @@
         margin-top: 10rem;
         margin-bottom: 3rem;
     }
-
+    
     .contact-footer {
         position: relative;
     }
 }
 
-@media(min-width: $lg) {
+@mixin desktop {
 
-    .fix-main {
+    .intro-body {
 
-        .big-tittle {
-            font-size: 5rem;
-            letter-spacing: 1rem;
+        .fix-main {
+
+            .intro-container {
+                
+                .big-tittle {
+                    font-size: 4.3rem;
+                    letter-spacing: 1rem;
+                }
+            }
         }
     }
 
@@ -108,17 +115,23 @@
     }
 }
 
-@media(min-width: $xl) {
 
-    .fix-main {
+@mixin fullcreen {
 
-        .intro-container {
-         
-            .big-tittle {
-                font-size: 6.5rem;
-                letter-spacing: 1rem;
+    .intro-body {
+
+        .fix-main {
+
+            .intro-container {
+             
+                .big-tittle {
+                    font-size: 5.5rem;
+                    letter-spacing: 1rem;
+                }
             }
+    
         }
-
     }
+
 }
+

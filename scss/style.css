@@ -1,106 +1,19 @@
 @use 'vars';
-@media (min-width: 768px) {
-  header .upper-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  header .upper-header .social-media-up {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 2em;
-    width: 90px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  header #down-header {
-    height: 165px;
-  }
-  header #down-header .social-media {
-    display: none;
-  }
-  header .container-lang {
-    margin: 2rem 0 1rem 0;
-  }
-  header .icon {
-    height: 40px;
-    width: 40px;
-  }
-  header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  header nav ul li {
-    margin: 0;
-  }
-  /*INTRO*/
-  .fix-main .intro-container .big-tittle {
-    font-size: 3.5em;
-    letter-spacing: 0.5rem;
-  }
-  .fix-main .subtittle {
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-  }
-  /*General*/
-  .tittle {
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-  }
-  .contact-footer {
-    position: relative;
-  }
-}
+@use 'vars';
+/*@media screen and (min-width: $xl) {
 
-@media (min-width: 1024px) {
-  .fix-main .big-tittle {
-    font-size: 5rem;
-    letter-spacing: 1rem;
-  }
-  .contact-main {
-    height: auto;
-  }
-  .contact-main .form-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .contact-main .form-group .container-input {
-    width: 46%;
-  }
-  .tittle {
-    margin-top: 15rem;
-    font-size: 4.5rem;
-    letter-spacing: 1rem;
-  }
-}
+    .fix-main {
 
-@media (min-width: 1280px) {
-  .fix-main .intro-container .big-tittle {
-    font-size: 6.5rem;
-    letter-spacing: 1rem;
-  }
-}
+        .intro-container {
+         
+            .big-tittle {
+                font-size: 6.5rem;
+                letter-spacing: 1rem;
+            }
+        }
 
+    }
+} */
 /***** GENERAL *****/
 * {
   margin: 0;
@@ -484,6 +397,133 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/***** MEDIA QUERIES *****/
+@media screen and (min-width: 768px) {
+  header .upper-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .upper-header .social-media-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 2em;
+    width: 90px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header #down-header {
+    height: 165px;
+  }
+  header #down-header .social-media {
+    display: none;
+  }
+  header .container-lang {
+    margin: 2rem 0 1rem 0;
+  }
+  header .icon {
+    height: 40px;
+    width: 40px;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  header nav ul li {
+    margin: 0;
+  }
+  /*INTRO*/
+  .intro-body .fix-main .intro-container .big-tittle {
+    font-size: 3.5em;
+    letter-spacing: 0.5rem;
+  }
+  .intro-body .fix-main .subtittle {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
+  /*General*/
+  .tittle {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+  }
+  .contact-footer {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro-body .fix-main .intro-container .big-tittle {
+    font-size: 4.3rem;
+    letter-spacing: 1rem;
+  }
+  .contact-main {
+    height: auto;
+  }
+  .contact-main .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact-main .form-group .container-input {
+    width: 46%;
+  }
+  .tittle {
+    margin-top: 15rem;
+    font-size: 4.5rem;
+    letter-spacing: 1rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .intro-body .fix-main .intro-container .big-tittle {
+    font-size: 4.3rem;
+    letter-spacing: 1rem;
+  }
+  .contact-main {
+    height: auto;
+  }
+  .contact-main .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact-main .form-group .container-input {
+    width: 46%;
+  }
+  .tittle {
+    margin-top: 15rem;
+    font-size: 4.5rem;
+    letter-spacing: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
