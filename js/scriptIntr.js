@@ -6,6 +6,54 @@ let page;
 let file;
 let varLength;
 
+//Change background video.
+
+function videoSource () {
+    let size = window.screen.width;
+    let vid = document.getElementById("bg-video");
+
+    if(size >= 500)  {
+        if (size >= 1024){
+            vid.setAttribute("src", "./media/video/bg_video_lg.mp4");
+        }
+        else {
+            vid.setAttribute("src", "./media/video/bg_video_md.mp4");
+        }    
+    }
+    else {
+        vid.setAttribute("src", "./media/video/bg_video_xs.mp4")
+    }
+}
+
+window.addEventListener("resize", videoSource);
+
+//Change language.
+
+function changeLanguage () {
+    let htmlLang = document.documentElement;
+
+    if (langSelect.checked == true) {
+        htmlLang.setAttribute("lang", "es");
+        console.log("Listorty");
+        
+    }
+    else {
+        htmlLang.setAttribute("lang", "en");
+        console.log("Listón.");
+    }
+}
+
+langSelect.addEventListener('click', changeLanguage);
+
+//Used when the page is open the first time.
+
+function watch () {
+    videoSource();  
+    changeLanguage();
+}
+
+watch();
+
 
 //Use of Enter key to go to home page.
 
@@ -25,16 +73,8 @@ window.addEventListener("keydown", (event) => {
 });
 
 
-//Change the language website.
-
-//langSelect.addEventListener('click', changeLang);
 
 
-langSelect.addEventListener('click', changeLanguage);
-
-function changeLanguage () {
-    element.lang = "es";
-}
 
 function newURL() {
     route = window.document.URL;
@@ -56,25 +96,3 @@ function newURL() {
 //        window.location.href = `${route}/${page}`;
 //    }
 //}
-
-//Change background video.
-
-window.addEventListener("resize", videoSource)
-
-
-function videoSource () {
-    let size = window.screen.width;
-    let vid = document.getElementById("bg-video");
-
-    if(size >= 500)  {
-        if (size >= 1024){
-            vid.setAttribute("src", "./media/video/bg_video_lg.mp4");
-        }
-        else {
-            vid.setAttribute("src", "./media/video/bg_video_md.mp4");
-        }    
-    }
-    else {
-        vid.setAttribute("src", "./media/video/bg_video_xs.mp4")
-    }
-}
