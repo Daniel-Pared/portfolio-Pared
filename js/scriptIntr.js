@@ -29,6 +29,13 @@ window.addEventListener("keydown", (event) => {
 
 langSelect.addEventListener('click', changeLang);
 
+
+langSelect.addEventListener('click', changeLanguage);
+
+function changeLanguage () {
+    elementNodeReference.lang = "es";
+}
+
 function newURL() {
     route = window.document.URL;
     page = route.split("/").pop();
