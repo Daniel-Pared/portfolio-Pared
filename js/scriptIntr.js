@@ -1,10 +1,5 @@
 
-const fileEs = "es";
 let langSelect = document.getElementById("lang-select");
-let route;
-let page;
-let file;
-let varLength;
 
 //Change background video.
 
@@ -31,15 +26,20 @@ window.addEventListener("resize", videoSource);
 
 function changeLanguage () {
     let htmlLang = document.documentElement;
+    let enterLink = document.getElementById('enter-btn');
 
     if (langSelect.checked == true) {
         htmlLang.setAttribute("lang", "es");
-        console.log("Listorty");
+        document.getElementById('subtittle').innerText = "DESARROLLADOR FRONT-END";
+        enterLink.innerText = "ENTRAR";
+        enterLink.setAttribute("href", "./es/home.html");
         
     }
     else {
         htmlLang.setAttribute("lang", "en");
-        console.log("Listón.");
+        document.getElementById('subtittle').innerText = "FRONT-END DEVELOPER";
+        enterLink.innerText = "ENTER";
+        enterLink.setAttribute("href", "./pages/home.html");
     }
 }
 
@@ -48,8 +48,7 @@ langSelect.addEventListener('click', changeLanguage);
 //Used when the page is open the first time.
 
 function watch () {
-    videoSource();  
-    changeLanguage();
+    videoSource();
 }
 
 watch();
@@ -58,41 +57,13 @@ watch();
 //Use of Enter key to go to home page.
 
 window.addEventListener("keydown", (event) => {
-    asingValues();
-    if (event.key === 'Enter' && page.localeCompare(index) === 0) {
-        let indexEs = file.localeCompare(fileEs);
 
-        if (indexEs === 0) {
-            window.location.href = `${route}/home.html`;
+    if (event.key === 'Enter') {
+        if (langSelect.checked == true) {
+            window.location.href = "./es/home.html";
         }
         else {
-            window.location.href = `${route}/${filePage}/home.html`;
-        };
-    };
-    
+            window.location.href = "./pages/home.html";
+        }
+    } 
 });
-
-
-
-
-
-function newURL() {
-    route = window.document.URL;
-    page = route.split("/").pop();
-    varLength = page.length + 1;
-    file = route.substring(0, route.length - varLength).split("/").pop();
-    route = route.substring(0, route.length - varLength);
-}
-
-//function changeLang() {
-//    newURL();
-//
-//    if (file.localeCompare(fileEs) !== 0) {
-//        window.location.href = `${route}/${fileEs}/${page}`;
-//    }
-//    else {
-//        varLength = file.length + 1;
-//        route = route.substring(0, route.length - varLength);
-//        window.location.href = `${route}/${page}`;
-//    }
-//}
