@@ -1,44 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-:root {
-    --blue: #3366ffff;
-    --grey: #4d4d44;
-    --violet: #ff1aff;
-}
-
-html {
-    background-color: #000;
-}
 
 .bg-body {
     height: 100vh;
     background-image: url(../media/img/bg_body_small.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    text-align: center;
-}
-
-.tittle {
-    margin: 4rem auto 1rem auto;
-}
-
-a {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    text-decoration: none;
-}
-
-p {
-    color: #fff;
 }
 
 /* Lo que sigue falta */
