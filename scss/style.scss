@@ -252,7 +252,7 @@ a {
                 animation-delay: 60ms;
             }
     
-            .subtittle {
+            #subtittle {
                 @include font;
                 font-size: 1em;
                 text-align: center;
@@ -269,7 +269,7 @@ a {
                 @include anim(1000ms);
                 animation-delay: 3000ms;
     
-                .enter-btn {
+                #enter-btn {
                     margin: 2rem 0 0 0;
                     padding: $half $S1;
                     font-size: 1.2rem;
