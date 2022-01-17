@@ -324,7 +324,7 @@ a {
           animation-delay: 60ms;
 }
 
-.intro-body .fix-main .intro-container .subtittle {
+.intro-body .fix-main .intro-container #subtittle {
   font-family: "Orbitron", sans-serif;
   text-decoration: none;
   color: #fff;
@@ -365,7 +365,7 @@ a {
           animation-delay: 3000ms;
 }
 
-.intro-body .fix-main .intro-container .container-enter-btn .enter-btn {
+.intro-body .fix-main .intro-container .container-enter-btn #enter-btn {
   margin: 2rem 0 0 0;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
@@ -539,7 +539,7 @@ a {
     font-size: 3.5em;
     letter-spacing: 0.5rem;
   }
-  .intro-body .fix-main .intro-container .subtittle {
+  .intro-body .fix-main .intro-container #subtittle {
     font-size: 1.6rem;
     letter-spacing: 0.5rem;
   }
@@ -562,7 +562,7 @@ a {
     font-size: 4.3rem;
     letter-spacing: 1rem;
   }
-  .intro-body .fix-main .intro-container .subtittle {
+  .intro-body .fix-main .intro-container #subtittle {
     font-size: 2rem;
     letter-spacing: 0.5rem;
   }
