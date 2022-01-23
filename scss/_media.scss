@@ -4,33 +4,9 @@
 @mixin tablet {
 
     header {
-        .upper-header {
-            display: flex;
-            justify-content: space-between;
-        
-            .social-media-up {
-                display: flex;
-                margin-right: 2em;
-                width: 90px;
-                justify-content: space-between;
-            }
-        }
     
-        #down-header {
-            height: 165px;
-        
-            .social-media {
-                display: none;
-            }
-        }
-    
-        .container-lang {
+        .container-lang-intro {
             margin: 2rem 0 $S1 0;
-        }
-    
-        .icon {
-            height: 40px;
-            width: 40px;
         }
     
         nav ul{
