@@ -24,12 +24,6 @@
             }
         }
 
-        .socials {
-            width: 80px;
-            margin-right: $S1;
-            align-items: center;
-            justify-content: space-between;
-        }
     }
         
     /*INTRO*/
@@ -60,15 +54,31 @@
         margin-top: 10rem;
         margin-bottom: 3rem;
     }
-    
-    /*.contact-footer {
-        position: relative;
-        margin-top: 2rem;
-        margin-bottom: $half;
-    }*/
+
+    .container-txt {
+        margin: $half 2rem;
+    }
+
 }
 
 @mixin desktop {
+
+    header {
+        
+        nav {
+            flex-direction: row;
+            width: 100%;
+    
+            .socials {
+                margin-top: 0;
+                margin-right: $S1;
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    
 
     .intro-body {
 
@@ -87,6 +97,23 @@
                 }
             }
  
+        }
+    }
+
+    .grid-container {
+        row-gap: 32px;
+        
+        
+        .one {
+            grid-column: 1 / 2;
+        }
+        
+        .two {
+            grid-column: 2 / 3;
+        }
+        
+        .three {
+            grid-column: 3 / 4; 
         }
     }
 

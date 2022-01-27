@@ -43,10 +43,6 @@ header {
         }
     }
 
-    .socials {
-        display: flex;
-    }
-
     /*language selector*/
 
     p {
@@ -86,6 +82,18 @@ header {
 
     /*menu*/
 
+    nav {
+        flex-direction: column;
+
+        .socials {
+            display: flex;
+            margin: 0 auto $S1 auto;
+            width: 80px;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
     li {
         list-style: none;
     }
@@ -107,35 +115,35 @@ footer {
     }
 }
 
+.container-txt {
+    width: 85%;
+    margin: $S1 auto;
+    padding: $half 0;
+}
+
 .grid-container {
     display: grid;
     margin: 2rem auto;
     width: 80%;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 32px;
 
     .grid-item {
         display:flex;
         flex-direction: column;
-        height: 300px;
         padding: $S1;
-        grid-column: 1/4;
-        @include brd (25px);
+        grid-column: 1 / 4;
     }
 
-    .project-1 {
+    .one {
         @extend .grid-item;
-        grid-row: 1;
     }
 
-    .project-2 {
+    .two {
         @extend .grid-item;
-        grid-row: 2;
     }
 
-    .project-3 {
+    .three {
         @extend .grid-item;
-        grid-row: 3;
     }
 }
 
@@ -143,7 +151,9 @@ footer {
 .card-container {
     @include brd(15px);
     width: 85%;
+    max-width: 400px;
     height: 450px;
+    margin: $S1 auto;
     padding: 0 $S1;
 
     picture {
