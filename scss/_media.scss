@@ -8,15 +8,28 @@
         .container-lang-intro {
             margin: 2rem 0 $S1 0;
         }
-    
-        nav ul{
+
+        ul {
             display: flex;
-            justify-content: space-evenly;
-    
+            width: 50%;
+            margin: $S1;
+            padding: 0;
+
             li {
-                margin: 0;
+                margin-right: 3rem;
+
+                a{
+                    font-size: 24px;
+                }
             }
-        }  
+        }
+
+        .socials {
+            width: 80px;
+            margin-right: $S1;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
         
     /*INTRO*/

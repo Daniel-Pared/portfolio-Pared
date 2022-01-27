@@ -38,7 +38,7 @@ header .container-lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 0.5rem 0 0;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -47,6 +47,7 @@ header .container-lang {
 
 header .container-lang p {
   font-size: 13px;
+  margin: 0;
 }
 
 header .socials {
@@ -95,6 +96,10 @@ header .lang-selector:checked::before {
   left: 67%;
 }
 
+header li {
+  list-style: none;
+}
+
 header #bdNavbar {
   background-color: #000;
 }
@@ -122,7 +127,7 @@ footer p {
   row-gap: 32px;
 }
 
-.grid-container .grid-item {
+.grid-container .grid-item, .grid-container .project-1, .grid-container .project-2, .grid-container .project-3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,46 +144,6 @@ footer p {
   border-radius: 25px;
 }
 
-.grid-container .grid-item picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 16px;
-  width: 100%;
-  height: 184px;
-  overflow: hidden;
-  border-radius: 25px;
-}
-
-.grid-container .grid-item picture img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -o-object-position: top;
-     object-position: top;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.grid-container .grid-item .container-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 84px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.grid-container .grid-item .container-link ul li {
-  color: #fff;
-}
-
 .grid-container .project-1 {
   -ms-grid-row: 1;
   grid-row: 1;
@@ -192,6 +157,55 @@ footer p {
 .grid-container .project-3 {
   -ms-grid-row: 3;
   grid-row: 3;
+}
+
+.card-container {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  width: 85%;
+  height: 450px;
+  padding: 0 1rem;
+}
+
+.card-container picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.card-container picture img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-container .container-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 84px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-container .container-link ul li {
+  color: #fff;
+  list-style: none;
 }
 
 .tittle {
@@ -225,6 +239,10 @@ a {
   padding: 0.5rem 1rem;
   border: 2px solid #fff;
   border-radius: 25px;
+}
+
+p {
+  color: #fff;
 }
 
 /***** INTRO *****/
@@ -398,7 +416,7 @@ a {
   padding: 2rem;
   width: 80%;
   border: 2px solid #fff;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .contact-main fieldset label {
@@ -472,16 +490,29 @@ a {
   header .container-lang-intro {
     margin: 2rem 0 1rem 0;
   }
-  header nav ul {
+  header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    width: 50%;
+    margin: 1rem;
+    padding: 0;
   }
-  header nav ul li {
-    margin: 0;
+  header ul li {
+    margin-right: 3rem;
+  }
+  header ul li a {
+    font-size: 24px;
+  }
+  header .socials {
+    width: 80px;
+    margin-right: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   /*INTRO*/
   .intro-body .fix-main .intro-container .big-tittle {

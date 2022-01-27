@@ -33,12 +33,13 @@ header {
 
     .container-lang {
         display: flex;
-        margin: 0;
+        margin: $half 0 0;
         width: 100%;
         justify-content: center;
 
         p {
             font-size: 13px;
+            margin: 0;
         }
     }
 
@@ -84,6 +85,10 @@ header {
     }
 
     /*menu*/
+
+    li {
+        list-style: none;
+    }
     
     #bdNavbar {
         background-color: $b;
@@ -116,50 +121,65 @@ footer {
         padding: $S1;
         grid-column: 1/4;
         @include brd (25px);
-
-        picture {
-            display: flex;
-            margin-top: 16px;
-            width: 100%;
-            height: 184px;
-            overflow: hidden;
-            border-radius: 25px;
-
-            img {
-                display: flex;
-                width: 100%;
-                object-position:top;
-                object-fit: cover;
-            }
-        }
-
-        .container-link {
-            display: flex;
-            width: 100%;
-            height: 84px;
-            align-items: center;
-            justify-content: center;
-
-            ul {
-                li {
-                    color: $w;
-                }
-            }
-        }
     }
 
     .project-1 {
+        @extend .grid-item;
         grid-row: 1;
     }
 
     .project-2 {
+        @extend .grid-item;
         grid-row: 2;
     }
 
     .project-3 {
+        @extend .grid-item;
         grid-row: 3;
     }
 }
+
+
+.card-container {
+    @include brd(15px);
+    width: 85%;
+    height: 450px;
+    padding: 0 $S1;
+
+    picture {
+        display: flex;
+        margin-top: 16px;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 15px;
+
+        img {
+            display: flex;
+            width: 100%;
+            object-position:top;
+            object-fit: cover;
+        }
+    }
+
+    .container-link {
+        display: flex;
+        width: 100%;
+        height: 84px;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            li {
+                color: $w;
+                list-style: none;
+            }
+        }
+    }
+}
+
+
+
 
 .tittle {
     margin: 5rem auto $S1 auto;
@@ -183,6 +203,10 @@ a {
     margin: 3rem auto;
     padding: $half $S1;
     @include brd(25px);
+}
+
+p {
+    color: $w;
 }
 
 
@@ -289,7 +313,7 @@ a {
         margin: $S1 auto $half auto;
         padding: 2rem;
         width: 80%;
-        @include brd(25px);
+        @include brd(15px);
 
         label {
             display: block;
