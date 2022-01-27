@@ -133,7 +133,7 @@ footer p {
 }
 
 .container-txt {
-  width: 85%;
+  width: 80%;
   margin: 1rem auto;
   padding: 0.5rem 0;
 }
@@ -156,6 +156,21 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+}
+
+.grid-container .one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+.grid-container .two {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+.grid-container .three {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;

@@ -116,7 +116,7 @@ footer {
 }
 
 .container-txt {
-    width: 85%;
+    width: map-get($percentage, eight);
     margin: $S1 auto;
     padding: $half 0;
 }
@@ -124,33 +124,35 @@ footer {
 .grid-container {
     display: grid;
     margin: 2rem auto;
-    width: 80%;
+    width: map-get($percentage, eight);
     grid-template-columns: repeat(3, 1fr);
 
     .grid-item {
         display:flex;
         flex-direction: column;
         padding: $S1;
-        grid-column: 1 / 4;
     }
 
     .one {
         @extend .grid-item;
+        grid-column: 1 / 4;
     }
 
     .two {
         @extend .grid-item;
+        grid-column: 1 / 4;
     }
 
     .three {
         @extend .grid-item;
+        grid-column: 1 / 4;
     }
 }
 
 
 .card-container {
     @include brd(15px);
-    width: 85%;
+    width: map-get($percentage, eighthalf);
     max-width: 400px;
     height: 450px;
     margin: $S1 auto;
@@ -159,14 +161,14 @@ footer {
     picture {
         display: flex;
         margin-top: 16px;
-        width: 100%;
+        width: map-get($percentage, hundred);
         height: 350px;
         overflow: hidden;
         border-radius: 15px;
 
         img {
             display: flex;
-            width: 100%;
+            width: map-get($percentage, hundred);
             object-position:top;
             object-fit: cover;
         }
