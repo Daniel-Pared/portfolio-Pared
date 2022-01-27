@@ -149,7 +149,6 @@ footer {
     }
 }
 
-
 .card-container {
     @include brd(15px);
     width: map-get($percentage, eighthalf);
@@ -270,7 +269,6 @@ p {
                 @include anim (1000ms);
                 animation-delay: 700ms;
             }
-            
             
             .container-enter-btn {
                 display:flex;
