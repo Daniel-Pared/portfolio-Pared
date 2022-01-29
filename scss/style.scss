@@ -25,7 +25,8 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 50px;
     z-index: 999;
@@ -116,9 +117,14 @@ footer {
 }
 
 .container-txt {
+    display: flex;
     width: map-get($percentage, eight);
     margin: $S1 auto;
     padding: $half 0;
+
+    p {
+        margin: 0 auto;
+    }
 }
 
 .grid-container {
