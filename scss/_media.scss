@@ -34,12 +34,12 @@
     
             .intro-container {
     
-                .big-tittle {
+                .big-title {
                     font-size: 3.5em;
                     letter-spacing: 0.5rem;
                 }
 
-                #subtittle {
+                #subtitle {
                     font-size: 1.6rem;
                     letter-spacing: 0.5rem;
                 }
@@ -48,7 +48,7 @@
     }
     
     /*General*/
-    .tittle {
+    .title {
         font-size: 3rem;
         letter-spacing: 0.5rem;
         margin-top: 10rem;
@@ -87,12 +87,12 @@
 
             .intro-container {
 
-                .big-tittle {
+                .big-title {
                     font-size: 4.3rem;
                     letter-spacing: 1rem;
                 }
 
-                #subtittle {
+                #subtitle {
                     font-size: 2rem;
                     letter-spacing: 0.5rem;
                 }
@@ -123,6 +123,7 @@
 
         .form-group {
             display: flex;
+            margin-bottom: 2rem;
             width: 100%;
             flex-direction: row;
             justify-content: space-between;
@@ -133,7 +134,7 @@
         }
     }
 
-    .tittle {
+    .title {
         margin-top: 15rem;
         font-size: 4.5rem;
         letter-spacing: 1rem;
@@ -154,7 +155,7 @@
 
             .intro-container {
              
-                .big-tittle {
+                .big-title {
                     font-size: 5.5rem;
                     letter-spacing: 1rem;
                 }
