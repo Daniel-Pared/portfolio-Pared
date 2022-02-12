@@ -1,167 +1,105 @@
-@import 'vars';
-
-
-@mixin tablet {
-
-    header {
-    
-        .container-lang-intro {
-            margin: 2rem 0 $S1 0;
-        }
-
-        ul {
-            display: flex;
-            width: 50%;
-            margin: $S1;
-            padding: 0;
-
-            li {
-                margin-right: 3rem;
-
-                a{
-                    font-size: 24px;
-                }
-            }
-        }
-
-    }
-        
-    /*INTRO*/
-    
-    .intro-body {
-    
-        .fix-main {
-    
-            .intro-container {
-    
-                .big-title {
-                    font-size: 3.5em;
-                    letter-spacing: 0.5rem;
-                }
-
-                #subtitle {
-                    font-size: 1.6rem;
-                    letter-spacing: 0.5rem;
-                }
-            } 
-        }
-    }
-    
-    /*General*/
-    .title {
-        font-size: 3rem;
-        letter-spacing: 0.5rem;
-        margin-top: 10rem;
-        margin-bottom: 3rem;
-    }
-
-    .container-txt {
-        margin: $half auto;
-        padding: 0 2rem;
-    }
-
-}
-
-@mixin desktop {
-
-    header {
-        
-        nav {
-            flex-direction: row;
-            width: 100%;
-    
-            .socials {
-                margin-top: 0;
-                margin-right: $S1;
-                margin-bottom: 0;
-                margin-left: 0;
-            }
-        }
-    }
-
-    
-
-    .intro-body {
-
-        .fix-main {
-
-            .intro-container {
-
-                .big-title {
-                    font-size: 4.3rem;
-                    letter-spacing: 1rem;
-                }
-
-                #subtitle {
-                    font-size: 2rem;
-                    letter-spacing: 0.5rem;
-                }
-            }
- 
-        }
-    }
-
-    .grid-container {
-        row-gap: 32px;
-        
-        
-        .one {
-            grid-column: 1 / 2;
-        }
-        
-        .two {
-            grid-column: 2 / 3;
-        }
-        
-        .three {
-            grid-column: 3 / 4; 
-        }
-    }
-
-    .contact-main {
-        height: auto;
-
-        .form-group {
-            display: flex;
-            margin-bottom: 2rem;
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-
-            .container-input {
-                width: 46%;
-            }
-        }
-    }
+@mixin breakpointOne {
 
     .title {
-        margin-top: 15rem;
+        font-size: 5rem;
+    }
+
+    .container-title {
+        width: 350px;
+        height: 350px;
+    }
+
+    #intro-title {
         font-size: 4.5rem;
-        letter-spacing: 1rem;
+        line-height: 4.5rem;
     }
 
-    .contact-footer {
-        position: relative;
-        margin-top: 4rem;
-        margin-bottom: $S1;
+    #subtitle {
+        font-size: 1.3rem;
     }
 }
 
-@mixin fullscreen {
+@mixin breakpointTwo {
 
-    .intro-body {
+    .title {
+        font-size: 6.5rem;
+    }
 
-        .fix-main {
-
-            .intro-container {
-             
-                .big-title {
-                    font-size: 5.5rem;
-                    letter-spacing: 1rem;
-                }
-            }
+    .container-lang-intro {
+        opacity: 0;
+        animation: fadeIn 1200ms forwards;
+        animation-delay: 1800ms;
+    }
     
-        }
+    .container-title {
+        width: 450px;
+        height: 450px;
+        opacity: 0;
+        box-shadow: none;
+        animation: fadeInShadow 1100ms forwards;
+        animation-delay: 40ms;
+    }
+
+    #intro-title {
+        font-size: 6rem;
+        line-height: 6rem;
+        opacity: 0;
+        text-shadow: none;
+        animation: fadeInText 900ms forwards;
+        animation-delay: 900ms;
+    }
+
+    #subtitle {
+        transform: scaleX(0);
+        animation: grow 1000ms forwards;
+        animation-delay: 1300ms;
+    }
+
+    #enter-btn {
+        top: 0;
+        opacity: 0;
+        box-shadow: none;
+        animation: fadeInShadow 1200ms forwards;
+        animation-delay: 1800ms;
     }
 }
 
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeInShadow {
+    0% { 
+        opacity: 0;
+        box-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: -2px 3px 1px #000;
+    }
+
+}
+
+@keyframes fadeInText {
+    0% { 
+        opacity: 0;
+        box-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: -2px 3px 1px #000;
+    }
+
+}
+
+@keyframes grow {
+    0% {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+}

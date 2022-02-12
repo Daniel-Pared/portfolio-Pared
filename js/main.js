@@ -30,14 +30,14 @@ function changeLanguage () {
 
     if (langSelect.checked == true) {
         htmlLang.setAttribute("lang", "es");
-        document.getElementById('subtittle').innerText = "DESARROLLADOR FRONT-END";
+        document.getElementById('subtitle').innerText = "DESARROLLADOR FRONT-END";
         enterLink.innerText = "ENTRAR";
         enterLink.setAttribute("href", "./es/home.html");
         
     }
     else {
         htmlLang.setAttribute("lang", "en");
-        document.getElementById('subtittle').innerText = "FRONT-END DEVELOPER";
+        document.getElementById('subtitle').innerText = "FRONT-END DEVELOPER";
         enterLink.innerText = "ENTER";
         enterLink.setAttribute("href", "./pages/home.html");
     }
