@@ -1,12 +1,13 @@
 
 let langSelect = document.getElementById("intro-lng-selector");
+let size = window.screen.width;
+let vid = document.getElementById("bg-video");
+let htmlLang = document.documentElement;
+let enterLink = document.getElementById('enter-btn');
 
 //Change background video.
 
 function videoSource () {
-    let size = window.screen.width;
-    let vid = document.getElementById("bg-video");
-
     if(size >= 913)  {
         if (size >= 1400){
             vid.setAttribute("src", "./media/video/production_ID_4884233-xl.mp4");
@@ -25,15 +26,11 @@ window.addEventListener("resize", videoSource);
 //Change language.
 
 function changeLanguage () {
-    let htmlLang = document.documentElement;
-    let enterLink = document.getElementById('enter-btn');
-
     if (langSelect.checked == true) {
         htmlLang.setAttribute("lang", "es");
         document.getElementById('subtitle').innerText = "DESARROLLADOR FRONT-END";
         enterLink.innerText = "ENTRAR";
         enterLink.setAttribute("href", "./es/home.html");
-        
     }
     else {
         htmlLang.setAttribute("lang", "en");
@@ -52,14 +49,6 @@ function watch () {
 }
 
 watch();
-
-function newURL() {
-    route = window.document.URL;
-    page = route.split("/").pop();
-    varLength = page.length + 1;
-    file = route.substring(0, route.length - varLength).split("/").pop();
-    route = route.substring(0, route.length - varLength);
-}
 
 
 //Use of Enter key to go to home page.
