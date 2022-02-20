@@ -166,7 +166,6 @@
             grid-column: 1 / 5;
         }
 
-
         .item1 {
             grid-column: 1/ 2;
             grid-row: 2;
@@ -197,7 +196,6 @@
     100% {
         opacity: 1;
     }
-
 }
 
 @keyframes fadeInShadow {
@@ -209,7 +207,6 @@
         opacity: 1;
         box-shadow: -2px 3px 1px #000;
     }
-
 }
 
 @keyframes fadeInText {
@@ -221,7 +218,6 @@
         opacity: 1;
         text-shadow: -2px 3px 1px #000;
     }
-
 }
 
 @keyframes grow {
