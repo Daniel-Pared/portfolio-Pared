@@ -1,5 +1,5 @@
 
-let langSelect = document.getElementById("lang-select");
+let langSelect = document.getElementById("intro-lng-selector");
 
 //Change background video.
 
@@ -7,16 +7,16 @@ function videoSource () {
     let size = window.screen.width;
     let vid = document.getElementById("bg-video");
 
-    if(size >= 500)  {
-        if (size >= 1024){
-            vid.setAttribute("src", "./media/video/bg_video_lg.mp4");
+    if(size >= 913)  {
+        if (size >= 1400){
+            vid.setAttribute("src", "./media/video/production_ID_4884233-xl.mp4");
         }
         else {
-            vid.setAttribute("src", "./media/video/bg_video_md.mp4");
+            vid.setAttribute("src", "./media/video/production_ID_4884233-lg.mp4");
         }    
     }
     else {
-        vid.setAttribute("src", "./media/video/bg_video_xs.mp4")
+        vid.setAttribute("src", "./media/video/production_ID_4884233-xs.mp4")
     }
 }
 
